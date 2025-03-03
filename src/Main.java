@@ -20,11 +20,9 @@ public class Main {
         passengerList.add(p1);
         passengerList.add(p2);
 
-        for (int i = 0; i < passengerList.size(); i++) {
-            passengerList.get(i).displayInfo();
+        for (Passenger passenger : passengerList) {
+            passenger.displayInfo();
         }
-
-
 
 
 
