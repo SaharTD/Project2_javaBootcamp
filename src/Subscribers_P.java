@@ -14,7 +14,7 @@ public class Subscribers_P extends Passenger{
             if (car.getMax_capacity() != 0) {
                 tripCost = car.fixed_route.getTripPrice() - (car.fixed_route.getTripPrice() * 0.5);
                 return tripCost;
-            } else throw new Exception("The maximum capacity of the car was equal to zero ");
+            } else throw new Exception("\n Note:The maximum capacity of the car was equal to zero ");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
