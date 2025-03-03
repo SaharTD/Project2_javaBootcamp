@@ -24,7 +24,7 @@ private boolean discount;
             return tripCost;
 
         }
-            }else throw new Exception("The maximum capacity of the car was equal to zero ");
+            } else throw new Exception("\n Note:The maximum capacity of the car was equal to zero ");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
