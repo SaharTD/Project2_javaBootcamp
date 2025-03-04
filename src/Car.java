@@ -39,4 +39,18 @@ public class Car {
 
 
 
+    public void reduceCapacity(){
+        if(max_capacity>0){
+           this.max_capacity--;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "\n Car{" +
+                "code='" + this.getCode() + '\'' +
+                "--fixed_route=" + this.fixed_route.toString() +
+                "--The available capacity =" + this.getMax_capacity() +
+                '}';
+    }
 }
