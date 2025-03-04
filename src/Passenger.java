@@ -1,13 +1,20 @@
+import java.util.ArrayList;
+
 public abstract class Passenger {
      String name;
      String id;
      double tripCost;
     Car car;
 
-    public Passenger(Car car, String id, String name) {
+    public Passenger(Car car) {
         this.car = car;
+    }
+
+    public Passenger( Car car, String id, String name) {
         this.id = id;
         this.name = name;
+        this.car = car;
+
     }
 
     public Passenger(Car car, String id, String name, double tripCost) {
@@ -22,8 +29,9 @@ public abstract class Passenger {
         return car;
     }
 
-    public void setCar(Car car) {
+    public void setCar(Car car ) {
         this.car = car;
+
     }
 
     public String getId() {
@@ -50,15 +58,18 @@ public abstract class Passenger {
         this.tripCost = tripCost;
     }
 
-    abstract double carReserve(Car car) throws Exception;
+    abstract void carReserve(Car car) throws Exception;
+    abstract double costCalculations(Car car) ;
 
 
-     public void displayInfo() throws Exception {
+
+    public void displayInfo()  {
+
          System.out.println("\n Passenger" +
-                 "\n Car code:"+car.getCode()+
+                 "\n Reversed Car information:"+this.getCar()+
                   "\n name :"+name+
                   "\n passenger ID :"+id+
-                  "\n Trip Cost :"+getTripCost()
+                  "\n Trip Final Cost :"+getTripCost()
 
          );
      }
