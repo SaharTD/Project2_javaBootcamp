@@ -38,4 +38,14 @@ public class Route {
     public void setTripPrice(int tripPrice) {
         this.tripPrice = tripPrice;
     }
+
+
+    @Override
+    public String toString() {
+        return "Route{" +
+                "Arrival Destination : " + destination_Address + '\'' +
+                "Start Destination :" + s_pickupAddress + '\'' +
+                ", Trip Price :" + tripPrice +
+                '}';
+    }
 }
